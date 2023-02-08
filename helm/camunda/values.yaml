@@ -1,0 +1,9 @@
+appName: camunda
+namespace: default
+configmap:
+  name: myhelmapp-configmap-v1c
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+image:
+  name: camunda/camunda-bpm-platform
+  tag: latest

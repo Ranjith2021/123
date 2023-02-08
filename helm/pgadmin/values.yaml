@@ -1,0 +1,16 @@
+
+
+appName: pgadmin
+
+port: 80
+
+namespace: default
+
+configmap:
+  name: myhelmapp-configmap-v11
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+
+image:
+  name: dpage/pgadmin4
+  tag: latest

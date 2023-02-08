@@ -1,0 +1,19 @@
+appName: crest-app
+namespace: default
+configmap:
+  name: myhelmapp-configmap-v1c
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+image:
+  name: ranjithshepur/new
+  tag: 1
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 5
+hpa:  
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+ingress:
+ # enabled: true 
+

@@ -1,0 +1,11 @@
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: {{ .Values.configmap.name }}
+  namespace: {{ .Values.namespace }}
+data:
+  DB_DRIVER: 'org.postgresql.Driver'
+  DB_URL: 'jdbc:postgresql://192.168.2.80:30042/camunda'
+  DB_USERNAME: 'xfact'
+  DB_PASSWORD: 'xFact2005'
+  CUSTOM_HEADER: {{ .Values.configmap.data.CUSTOM_HEADER }}

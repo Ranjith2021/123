@@ -1,0 +1,13 @@
+appName: rabbitmq
+namespace: default
+replicas: 1
+configmap:
+  name: myhelmapp-configmap-v1r
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+image:
+  name: rabbitmq
+  tag: 3-management
+
+  
+ 

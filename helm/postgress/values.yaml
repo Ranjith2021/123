@@ -1,0 +1,13 @@
+
+
+appName: postgress
+namespace: default
+
+configmap:
+  name: myhelmapp-configmap-v1
+  data:
+    CUSTOM_HEADER: 'This app was deployed with helm!'
+
+image:
+  name: postgres
+  tag: 13
